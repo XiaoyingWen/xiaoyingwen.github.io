@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>About | Xiaoying Wen</title>
+  <title>Contact | Xiaoying Wen</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -35,24 +35,37 @@
       </nav>
   </div> 
 
-  <div class="panel-body">
-    <div class="container">
+ <div class="panel-body">
+  <div class="container">
     <div class="row">
      <div id="main-container">  
       <div class="col-xs-12 col-md-8">
         <section class="main-section">
-          <h1>About Me</h1>
+          <h1>Contact</h1>
 
-          <img src="assets/images/xyw-we.jpg" class="auth-image" alt="Xiaoying Wen">
-
-          <p>Xiaoying Wen has been working as a middleware developer for many years.  After been promoted to manage the IT development team, she realized though spending much less time on coding she needs to have a more broader knowledge and keep on top of cutting-edge technology.  So here she is, a student of Rutgers Coding Bootcamp class.</p>
-
-          <p>When she isn’t coding, she loves to explore nature, work in her garden (gardenia being one of her favorite flowers), and travel with families.</p>
+          <form id="contact-form">
+            <ul>
+              <li>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+              </li>
+              <li>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required="required"></textarea>
+              </li>
+            </ul>
+            <input type="submit">
+          </form>
 
         </section>
       </div>
       </div>
-      <div class="col-xs-12 col-md-4" class="float-lg-right">
+
+    <div class="col-xs-12 col-md-4" class="float-md-right">
         <section class="sidebar">
           <div id="connect">
             <h2>Connect with Me</h2>
@@ -73,5 +86,6 @@
     </footer> 
   </div>
   </div> <!-- panel panel-default -->
+
 </body>
 </html>
