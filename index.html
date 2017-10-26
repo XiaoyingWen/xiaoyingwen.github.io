@@ -13,6 +13,25 @@
 </head>
 
 <body>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1765118646861994',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <div class="panel panel-default">
   <div class="panel-heading">
       <nav class="navbar navbar-default navbar-fixed-top">
@@ -61,6 +80,12 @@
             <a href="http://www.linkedin.com/in/xiaoying-wen-b128a54" target="_blank"><img src="assets/images/linkedin-128.png" class="social" alt="LinkedIn" /></a>
             <a href="http://stackexchange.com/users/10506442/helen" target="_blank"><img src="assets/images/stackoverflow-128.png" class="social" alt="Stack Overflow" /></a>
           </div>
+          <p>Click the button below to trigger a Share Dialog</p>
+          <div id="shareBtn" class="btn btn-success clearfix">Share</div>
+          <p style="margin-top: 50px">
+          <hr />
+          <a class="btn btn-small"  href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Share Dialog Documentation</a>
+          </p>
         </section>
       </div>
     </div> <!-- row -->
@@ -73,5 +98,13 @@
     </footer> 
   </div>
   </div> <!-- panel panel-default -->
+  <script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){});
+}
+</script>
 </body>
 </html>
